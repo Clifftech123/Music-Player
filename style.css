@@ -8,41 +8,23 @@ html {
   box-sizing: border-box;
 }
 
-
-
 body{
   margin: 0;
   min-height: 100vh;
-  background: #024a92ed;
+  background: #c9ced3;
   display: flex;
   justify-content: center;
   align-items: center;
-
   font-size: 12px;
-}
-
-body::before{    
-      content: "";
-      background-image: url('https://as2.ftcdn.net/v2/jpg/01/67/57/83/1000_F_167578386_I8xXJ1nIHev54yBvPRk2dTkaMRDOCHzK.jpg');
-      
-      position: absolute;
-      top: 0px;
-      right: 0px;
-      bottom: 0px;
-      left: 0px;
-      z-index: -1;
-      background-size: cover;
-      background-position: center;
-      opacity: 0.25;
 }
 
 /* MAIN CONTAINER */
 .player-container{
   height: 500px;
   width: 400px;
-  background-color: #fff;
+  background-color: #eaeaea;
   border-radius: 20px;
-  box-shadow: 0 1px 5px 1px rgba(0, 0,0, 0.3) ;
+  box-shadow: 0 5px 15px 3px rgba(0, 0,0, 0.3) ;
 }
 
 .img-container {
@@ -75,7 +57,7 @@ h2{
   
 }
 
-/* Progress */
+/* PROGRESS */
 .progress-container {
   background: #fff;
   border-radius: 5px;
@@ -89,7 +71,9 @@ h2{
   background: #242323;
   border-radius: 5px;
   height: 100%;
-  /* change this to show progress */
+  /* 
+  CHANGE THIS TO SHOW PROGRESS 
+  */
   width: 66%;
   transition: width 0.1s linear;
 }
@@ -101,7 +85,9 @@ h2{
   justify-content: space-between;
 }
 
-/* Controls */
+/*  
+CONTROLS
+*/
 .player-controls {
   position: relative;
   top: -15px;
@@ -109,13 +95,19 @@ h2{
   width: 200px;
 }
 
+/* FONTWOAME CONTROL ICONS */
 .fas {
   font-size: 30px;
   color: rgb(129, 129, 129);
   margin-right: 30px;
+  cursor: pointer;
+  user-select: none;
 
 }
 
+.fas:hover{
+  filter: brightness(70%);
+}
 
 
 .main-button {
@@ -128,12 +120,14 @@ h2{
 @media screen and (max-width: 376px) {
 
   .player-container{
-    width: 95vw;
+    margin: 0 20px 0 20px;
+
     
   }
 
   .img-container {
     left: 29px;
+
   }
  
   h2 {
